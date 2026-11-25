@@ -2,10 +2,9 @@
 
 Clado stores **100% of canvas structure in plain Markdown**—zero hidden coordinate databases, zero binary lock-in.
 
-## `.md` First, Permanent `.mdc` Compatibility
+## Plain `.md` Files
 
-- Use standard **`.md`** for all new canvas files (works natively in GitHub, VS Code, Obsidian).
-- Existing `.mdc` files remain permanently supported across rendering and MCP editing.
+- Clado uses standard **`.md`** files (working natively across GitHub, VS Code, and Obsidian).
 - Files under `<workspace>/.clado/doc/` appear automatically in the canvas directory.
 
 ## YAML Frontmatter

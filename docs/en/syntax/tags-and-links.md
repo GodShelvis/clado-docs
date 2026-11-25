@@ -32,4 +32,3 @@ Clado unifies line-level linking across prose, lists, tables, code blocks, and M
 - Same-document Tag link: `[Verify Signature](#verify-sign)` or `[Verify Signature](PaymentGateway#verify-sign)`
 - Cross-document Tag link: `[Idempotent Commit](ledger.md#idempotency)` (preserved automatically on file moves/renames)
 - Duplicate Tag IDs in the same document trigger the `MD_TAG_DUPLICATE_ID` error diagnostic.
-- Existing `clado:code:` / `clado:table:` / `clado:mermaid:` and `clado:to:line|code|table|mermaid` syntax remains 100% backward compatible.

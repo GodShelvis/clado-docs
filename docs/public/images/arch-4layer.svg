@@ -62,5 +62,5 @@
   </g>
   <rect x="50" y="370" width="66" height="20" rx="6" fill="rgba(255,255,255,0.14)"/>
   <text x="83" y="384" text-anchor="middle" fill="#e2e8f0" font-size="10.5" font-weight="600">Layer 0</text>
-  <text x="128" y="384" fill="#ffffff" font-size="13" font-weight="600">纯文本单一事实源：.md（兼容 .mdc） · .clado/templates · .clado/plugins · .clado/sessions</text>
+  <text x="128" y="384" fill="#ffffff" font-size="13" font-weight="600">纯文本单一事实源：标准 .md · .clado/templates · .clado/plugins · .clado/sessions</text>
 </svg>

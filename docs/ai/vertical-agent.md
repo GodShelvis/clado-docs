@@ -61,6 +61,6 @@ flowchart LR
 }
 ```
 
-::: tip 无感回退
-若未配置原生 LLM API Key，灵感面板会自动回退为本地 ACP 直连模式（默认预设 ZCode），开箱即用。
+::: tip 两种运行模式
+既可以在配置原生 LLM 凭据后启用内置双协议流式引擎，也可以在未填写 API Key 时直接以本地 ACP 执行器模式运行（默认预设 ZCode）。关于面板外观与交互细节，请参阅 [`clado.agent` 插件详解](/plugins/agent)。
 :::

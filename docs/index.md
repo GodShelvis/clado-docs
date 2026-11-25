@@ -6,19 +6,19 @@ hero:
   text: "纯文本即画布，为 AI 研发协作而生"
   tagline: "一份标准 Markdown 同时呈现卡片调用链、脑图用例树与文章流。AI 通过 MCP 与内置垂直 Agent 实时操作画布，你作为观察者直观审查、点选与拍板。"
   image:
-    light: /images/hero-cards-light.png
-    dark: /images/hero-cards-dark.png
-    alt: Clado 卡片画布实时预览（浅色 / 深色）
+    light: /images/hero-visual-light.svg
+    dark: /images/hero-visual-dark.svg
+    alt: Clado 概念视觉图：悬浮卡片、语义 Tag 锚点与柔光 AI 协作
   actions:
     - theme: brand
       text: 快速开始 →
       link: /guide/getting-started
     - theme: alt
-      text: 什么是 Clado
-      link: /guide/what-is-clado
+      text: 了解 Clado 本体
+      link: /core/what-is-core
     - theme: alt
-      text: 统一语义 Tag 与连线
-      link: /syntax/tags-and-links
+      text: 探索内置插件
+      link: /plugins/overview
 
 features:
   - icon: 🗂️

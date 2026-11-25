@@ -6,7 +6,7 @@ Clado 内置了 7 套开箱即用的研发与测试模板，并配备了实时�
 
 当你或 AI 调用 `clado_templates list` / `read` 时，Clado 按以下优先级自动合并模板（同名模板高优先级覆盖低优先级）：
 
-1. **当前工作区项目模板**：`<工作区>/.clado/templates/*.mdc`
+1. **当前工作区项目模板**：`<工作区>/.clado/templates/*.md`
 2. **逐层上级目录模板**：父级团队/组织仓库中的 `.clado/templates/`
 3. **本机用户模板库**：`~/.clado/templates/`（执行 `clado install` 或 `clado init` 自动准备）
 
@@ -32,10 +32,8 @@ Clado 解析引擎在每次渲染、保存和 MCP 写入时都会执行确定性
 | --- | --- | --- |
 | `MD_NO_CARD` | `error` / `warn` | 整篇缺少一级标题 `#`，或某子标题出现在任何 `#` 之前。 |
 | `MD_CARD_ISOLATED` | `error` | 多卡画布交付校验（`clado build`）时存在未参与任何跨卡关系的孤立卡片（单卡画布自动豁免）。 |
-| `MD_EDGE_AMBIGUOUS` | `error` | 链接目标同时匹配多张同名卡片，需改用 `卡片标题.小节标题` 完整路径或唯一 `#tagId`。 |
+| `MD_EDGE_AMBIGUOUS` | `error` | 链接目标同时匹配多张同名卡片，需改用 `卡片标题#小节标题` 完整路径或唯一 `#tagId`。 |
 | `MD_TAG_DUPLICATE_ID` | `error` | 同一文档内定义了重复的 Tag `#id`，修改其中一个保持唯一。 |
-| `MD_MEDIA_LINK_SOURCE` | `error` | `clado:code:` / `table:` / `mermaid:` 起点未匹配到对应行或节点。 |
-| `MD_MEDIA_LINK_TARGET` | `error` | `clado:to:...` 对称落点未匹配到目标节点内的对应正文行、代码行、表格行或 Mermaid 节点。 |
 | `MD_FRONT_MATTER_INVALID` | `error` | YAML 文档头格式非法。 |
 | `MD_DUPLICATE_HEADING` | `warn` | 同级出现重名标题。 |
 | `MD_HEADING_SKIP` | `warn` | 标题层级跳跃（例如 `#` 下直接跳 `###`）。 |

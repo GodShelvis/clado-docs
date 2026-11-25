@@ -8,13 +8,13 @@ Traditional whiteboards force humans to drag boxes and redraw arrows manually—
 
 1. **Humans observe, review, and decide**: Explore your system interactively in **Cards** (call chains), **Mindmap** (test suites & scope), or **Document** (linear reading). Multi-select cards with `Cmd / Ctrl + Click` and tell AI what to refine.
 2. **AI reads real code and maintains the canvas**: Both the built-in vertical Agent and external clients (ZCode, Claude Code, Cursor, Codex) use **Streamable HTTP MCP** to inspect your selection, obey template constraints, and apply atomic updates.
-3. **Plain Markdown is the Single Source of Truth**: Every card, hierarchy level, semantic Tag, and precision wire lives in standard `.md` (with permanent `.mdc` compatibility)—readable on GitHub, VS Code, or Obsidian with zero proprietary binary lock-in.
+3. **Plain Markdown is the Single Source of Truth**: Every card, hierarchy level, semantic Tag, and precision wire lives in standard `.md` files—readable on GitHub, VS Code, or Obsidian with zero proprietary binary lock-in.
 
 ```mermaid
 flowchart LR
   H["Human (Observer / Director)"] -->|"Browse · Multi-select · Decide"| A["AI Agent (Built-in / MCP)"]
   A -->|"Streamable HTTP MCP"| S["Clado Microkernel + Validator"]
-  S -->|"Atomic writes (.md / .mdc)"| F["Local Workspace Plain Text"]
+  S -->|"Atomic writes (.md)"| F["Local Workspace Plain Text"]
   F -->|"Live SSE Push"| C["Browser Canvas (Cards / Mindmap / Doc)"]
   C -->|"Visual Feedback"| H
 ```

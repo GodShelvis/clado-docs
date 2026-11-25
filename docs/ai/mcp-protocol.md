@@ -13,7 +13,7 @@ Clado 不把上百个零散工具直接塞进模型上下文，而是收束为 *
 | --- | --- | --- |
 | **`clado_workspace`** | `init` / `inspect` / `workspaces` / `search` / `validate` / `selection` | 初始化工作区、列举子工作区、全文搜索、全量校验、**读取用户在画布上点选的卡片（`selection`）** |
 | **`clado_templates`** | `list` / `read` / `create` / `update` / `delete` / `pull` / `push` | 管理项目模板与本机用户模板库，支持继承合并与双向同步 |
-| **`clado_documents`** | `list` / `read` / `create` / `copy` / `update` / `rename` / `delete` | `.md` / `.mdc` 文档级操作；支持 `summary`/`nodes`/`source`/`full` 分级读取；重命名自动重写引用（保留 `#tagId`） |
+| **`clado_documents`** | `list` / `read` / `create` / `copy` / `update` / `rename` / `delete` | 标准 `.md` 文档级操作；支持 `summary`/`nodes`/`source`/`full` 分级读取；重命名自动重写引用（保留 `#tagId`） |
 | **`clado_nodes`** | `read` / `query` / `create` / `insert` / `update` / `rename` / `move` / `delete` | 按标题路径定位节点；支持上下游图查询（`parent`/`children`/`upstream`/`downstream`）与按唯一原文局部替换 |
 | **`clado_links`** | `list` / `connect` / `disconnect` | 从具体正文行、代码行、表格行或 Mermaid 节点建立与断开连线 |
 | **`clado_batch`** | `operations`（1–100 步） | 事务化批量执行混合操作，支持 `dryRun: true` 预演，任一步校验失败整批回滚 |

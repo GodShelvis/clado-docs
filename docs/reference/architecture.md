@@ -11,7 +11,7 @@ Clado 坚持 **「小内核 · 强保护 · 声明式扩展」** 的四层微内
 | **Layer 1 · 微内核** | `clado.host` | ❌ 绝对禁止 | 唯一拥有文件原子读写与解析权 | Core Parser（含 Tag 与诊断）、多子工作区并发写锁、Canvas Host、SSE 事件总线、MCP Gateway |
 | **Layer 2 · 内置插件** | `clado.*` | ❌ 绝对禁止 | 不直接写盘，通过受控宿主接口交互 | 三大视图（`cards` / `mindmap` / `doc`）与四大四角悬浮控件（`brand` / `view-controls` / `directory` / `agent`） |
 | **Layer 3 · 外部插件** | `<author>.<name>` | 仅允许显式升级 | 运行在隔离 iframe 沙箱或受审计执行器中 | 声明式 `clado-plugin.json`，按最小权限读取上下文或经 `exposeToAgent` 动态挂载到 MCP |
-| **Layer 0 · 纯文本存储** | 本地文件系统 | Git 版本管理 | 单一事实源 | `.md`（兼容 `.mdc`）、`.clado/templates`、`.clado/plugins`、`.clado/sessions` |
+| **Layer 0 · 纯文本存储** | 本地文件系统 | Git 版本管理 | 单一事实源 | 标准 `.md`、`.clado/templates`、`.clado/plugins`、`.clado/sessions` |
 
 ## 核心源码模块地图
 

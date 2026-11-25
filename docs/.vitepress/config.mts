@@ -7,6 +7,7 @@ const zhSidebar = [
     collapsed: false,
     items: [
       { text: '什么是 Clado', link: '/guide/what-is-clado' },
+      { text: 'Clado 本体（核心引擎）', link: '/core/what-is-core' },
       { text: '快速开始与安装', link: '/guide/getting-started' },
       { text: '多子工作区并发协作', link: '/guide/multi-workspace' },
       { text: '移动端适配与触控手势', link: '/guide/mobile-and-gestures' },
@@ -32,10 +33,14 @@ const zhSidebar = [
     ],
   },
   {
-    text: '插件与扩展生态',
+    text: '内置插件与扩展生态',
     collapsed: false,
     items: [
-      { text: '内置受保护插件 (clado.*)', link: '/plugins/builtin' },
+      { text: '内置插件总览', link: '/plugins/overview' },
+      { text: 'clado.brand · 品牌与设置', link: '/plugins/brand' },
+      { text: 'clado.view-controls · 视图与诊断', link: '/plugins/view-controls' },
+      { text: 'clado.directory · 文档目录', link: '/plugins/directory' },
+      { text: 'clado.agent · 灵感 Agent', link: '/plugins/agent' },
       { text: '开发你的第一个插件', link: '/plugins/development' },
       { text: '插件市场与权限审计', link: '/plugins/marketplace' },
     ],
@@ -57,6 +62,7 @@ const enSidebar = [
     collapsed: false,
     items: [
       { text: 'What is Clado?', link: '/en/guide/what-is-clado' },
+      { text: 'Clado Core Engine', link: '/en/core/what-is-core' },
       { text: 'Quick Start & Installation', link: '/en/guide/getting-started' },
       { text: 'Multi-Workspace Concurrency', link: '/en/guide/multi-workspace' },
       { text: 'Mobile & Touch Gestures', link: '/en/guide/mobile-and-gestures' },
@@ -82,10 +88,14 @@ const enSidebar = [
     ],
   },
   {
-    text: 'Plugins & Ecosystem',
+    text: 'Built-in Plugins & Ecosystem',
     collapsed: false,
     items: [
-      { text: 'Protected Built-in Plugins', link: '/en/plugins/builtin' },
+      { text: 'Built-in Plugins Overview', link: '/en/plugins/overview' },
+      { text: 'clado.brand · Brand & Settings', link: '/en/plugins/brand' },
+      { text: 'clado.view-controls · Views & Diagnostics', link: '/en/plugins/view-controls' },
+      { text: 'clado.directory · Documents & Workspaces', link: '/en/plugins/directory' },
+      { text: 'clado.agent · Inspiration Agent', link: '/en/plugins/agent' },
       { text: 'Build Your First Plugin', link: '/en/plugins/development' },
       { text: 'Plugin Marketplace & Audit', link: '/en/plugins/marketplace' },
     ],
@@ -122,9 +132,10 @@ export default withMermaid(
         themeConfig: {
           nav: [
             { text: '指南', link: '/guide/what-is-clado', activeMatch: '/guide/' },
+            { text: 'Clado 本体', link: '/core/what-is-core', activeMatch: '/core/' },
             { text: '语法与连线', link: '/syntax/tags-and-links', activeMatch: '/syntax/' },
             { text: 'AI 与 MCP', link: '/ai/mcp-protocol', activeMatch: '/ai/' },
-            { text: '插件生态', link: '/plugins/builtin', activeMatch: '/plugins/' },
+            { text: '插件生态', link: '/plugins/overview', activeMatch: '/plugins/' },
             { text: '参考', link: '/reference/cli', activeMatch: '/reference/' },
             { text: '0.5.5-beta.5', link: '/changelog' },
           ],
@@ -152,9 +163,10 @@ export default withMermaid(
         themeConfig: {
           nav: [
             { text: 'Guide', link: '/en/guide/what-is-clado', activeMatch: '/en/guide/' },
+            { text: 'Clado Core', link: '/en/core/what-is-core', activeMatch: '/en/core/' },
             { text: 'Syntax & Links', link: '/en/syntax/tags-and-links', activeMatch: '/en/syntax/' },
             { text: 'AI & MCP', link: '/en/ai/mcp-protocol', activeMatch: '/en/ai/' },
-            { text: 'Plugins', link: '/en/plugins/builtin', activeMatch: '/en/plugins/' },
+            { text: 'Plugins', link: '/en/plugins/overview', activeMatch: '/en/plugins/' },
             { text: 'Reference', link: '/en/reference/cli', activeMatch: '/en/reference/' },
             { text: '0.5.5-beta.5', link: '/en/changelog' },
           ],

@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | `clado_workspace` | `init`, `inspect`, `workspaces`, `search`, `validate`, `selection` | Workspace discovery, search, full validation, and reading live canvas multi-selection |
 | `clado_templates` | `list`, `read`, `create`, `update`, `delete`, `pull`, `push` | Manage and sync workspace/user templates |
-| `clado_documents` | `list`, `read`, `create`, `copy`, `update`, `rename`, `delete` | `.md` / `.mdc` document lifecycle with automatic reference rewriting |
+| `clado_documents` | `list`, `read`, `create`, `copy`, `update`, `rename`, `delete` | Standard `.md` document lifecycle with automatic reference rewriting |
 | `clado_nodes` | `read`, `query`, `create`, `insert`, `update`, `rename`, `move`, `delete` | Heading-path edits and upstream/downstream graph queries |
 | `clado_links` | `list`, `connect`, `disconnect` | Precision line, code, table, and Mermaid linking |
 | `clado_batch` | `operations` (1–100) | Atomic transactional batches with `dryRun: true` support |

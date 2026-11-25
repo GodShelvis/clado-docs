@@ -6,19 +6,19 @@ hero:
   text: "Plain Markdown as a Live Visual Canvas for AI Engineering"
   tagline: "One standard Markdown file renders simultaneously as a Cards Call-Graph, Mindmap Test Tree, and Linear Document. AI operates the canvas via MCP and the built-in vertical Agent while you review, select, and decide."
   image:
-    light: /images/hero-cards-light.png
-    dark: /images/hero-cards-dark.png
-    alt: Clado Visual Canvas Live Preview (Light & Dark)
+    light: /images/hero-visual-light.svg
+    dark: /images/hero-visual-dark.svg
+    alt: Clado conceptual visual with floating cards, semantic Tag anchors, and AI bottom aura
   actions:
     - theme: brand
       text: Get Started →
       link: /en/guide/getting-started
     - theme: alt
-      text: What is Clado?
-      link: /en/guide/what-is-clado
+      text: Clado Core Engine
+      link: /en/core/what-is-core
     - theme: alt
-      text: Semantic Tags & Links
-      link: /en/syntax/tags-and-links
+      text: Built-in Plugins
+      link: /en/plugins/overview
 
 features:
   - icon: 🗂️

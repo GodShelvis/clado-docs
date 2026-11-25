@@ -6,7 +6,7 @@
 
 ### 模式 A：单项目工作区
 
-在单个项目根目录启动，所有 `.md` / `.mdc` 位于 `<项目>/.clado/doc/`：
+在单个项目根目录启动，所有标准 `.md` 画布文档位于 `<项目>/.clado/doc/`：
 
 ```bash
 clado serve /projects/order-service

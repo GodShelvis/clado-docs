@@ -8,13 +8,13 @@
 
 1. **人负责观察、审查与拍板**：你在浏览器画布里按需逐层展开阅读——用 **卡片视图** 追踪接口到代码的调用链路，用 **脑图视图** 评审需求范围与测试用例树，用 **文档视图** 按文章顺序精读；按住 `Cmd / Ctrl` 点选几张卡片，直接告诉 AI 要改什么。
 2. **AI 负责理解代码与维护画布**：无论是内置垂直 Agent，还是外部接入的 ZCode / Claude Code / Cursor / Codex，都通过 **Streamable HTTP MCP** 读取你的选区、核对模板约束、执行原子化增删改连。
-3. **纯文本是唯一事实源（Single Source of Truth）**：每一张卡片、每一个层级、每一条连线与语义 Tag 锚点，都明文保存在标准 `.md`（永久兼容 `.mdc`）文件中，直接放进 Git、VS Code 或 GitHub 依然干净可读，没有任何私有二进制格式。
+3. **纯文本是唯一事实源（Single Source of Truth）**：每一张卡片、每一个层级、每一条连线与语义 Tag 锚点，都明文保存在标准 `.md` 文件中，直接放进 Git、VS Code 或 GitHub 依然干净可读，没有任何私有二进制格式。
 
 ```mermaid
 flowchart LR
   H["人（观察者 / 指挥官）"] -->|"浏览画布 · 多选卡片 · 口头拍板"| A["AI Agent（内置 / 外部 MCP）"]
   A -->|"Streamable HTTP MCP"| S["Clado 微内核 + 校验引擎"]
-  S -->|"原子写盘（.md / .mdc）"| F["本地工作区纯文本"]
+  S -->|"原子写盘（.md）"| F["本地工作区纯文本"]
   F -->|"SSE 实时推送渲染"| C["浏览器画布（卡片 / 脑图 / 文档）"]
   C -->|"所见即所得反馈"| H
 ```
@@ -33,5 +33,6 @@ flowchart LR
 
 ## 下一步
 
-- 准备好动手试试？前往 [快速开始与安装](/guide/getting-started)。
-- 想直接了解最新的「卡片 + Tag」精准连线语法？前往 [统一语义 Tag 与精准连线](/syntax/tags-and-links)。
+- 区分本体引擎与内置插件边界：[Clado 本体（核心引擎）→](/core/what-is-core)
+- 准备好动手试试？前往 [快速开始与安装 →](/guide/getting-started)
+- 了解「卡片 + Tag」精准连线语法：前往 [统一语义 Tag 与精准连线 →](/syntax/tags-and-links)

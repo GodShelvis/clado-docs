@@ -12,11 +12,11 @@
 
 | 颜色类 / 别名 | 胶囊效果 | 无字圆点 | 约定语义 | 典型场景 |
 | --- | --- | :---: | --- | --- |
-| `.green` / `.add` | <span class="demo-tag green">新增</span> | <span class="demo-dot green"></span> | **新增** | 新接口、新字段、新逻辑分支（兼容模板 `🟩 新增`） |
-| `.amber` / `.mod` | <span class="demo-tag amber">修改</span> | <span class="demo-dot amber"></span> | **修改 / 注意** | 存量逻辑调整、兼容注意项、告警点（兼容模板 `🟨 修改`） |
-| `.red` / `.del` | <span class="demo-tag red">删除</span> | <span class="demo-dot red"></span> | **删除 / 风险** | 下线代码、废弃字段、高危风险提示（兼容模板 `🟥 删除`） |
-| `.blue` / `.spec` | <span class="demo-tag blue">需求原文</span> | <span class="demo-dot blue"></span> | **需求 / 契约** | 需求原文、输入输出契约、核心主流程（兼容模板 `🟦 需求原文`） |
-| `.purple` / `.note` | <span class="demo-tag purple">特别说明</span> | <span class="demo-dot purple"></span> | **特别说明** | 补充约束、异步回调、降级策略（兼容模板 `🟪 特别说明`） |
+| `.green` / `.add` | <span class="demo-tag green">新增</span> | <span class="demo-dot green"></span> | **新增** | 新接口、新字段、新逻辑分支 |
+| `.amber` / `.mod` | <span class="demo-tag amber">修改</span> | <span class="demo-dot amber"></span> | **修改 / 注意** | 存量逻辑调整、变更注意项、告警点 |
+| `.red` / `.del` | <span class="demo-tag red">删除</span> | <span class="demo-dot red"></span> | **删除 / 风险** | 下线代码、废弃字段、高危风险提示 |
+| `.blue` / `.spec` | <span class="demo-tag blue">需求原文</span> | <span class="demo-dot blue"></span> | **需求 / 契约** | 需求原文、输入输出契约、核心主流程 |
+| `.purple` / `.note` | <span class="demo-tag purple">特别说明</span> | <span class="demo-dot purple"></span> | **特别说明** | 补充约束、异步回调、降级策略 |
 | `.gray`（默认） | <span class="demo-tag gray">锚点</span> | <span class="demo-dot gray"></span> | **通用锚点** | 无特定颜色语义的纯定位锚点 |
 
 ## 2. 两种形态与跨组件写法（视觉一律归左）
@@ -73,17 +73,6 @@ flowchart LR
 如果同一份文档内定义了两个相同的 `#id`，Clado 解析器会立即报 `MD_TAG_DUPLICATE_ID` 错误，并在画布右上角诊断面板与 MCP 响应中指出精确行号。
 :::
 
-## 4. 兼容既有对称「行连行」语法（`clado:code:` / `clado:to:`）
-
-在既有文档中，通过标准 Markdown 链接 `title` 表达的代码行 / 表格行 / Mermaid 起点与对称落点依然 100% 兼容：
-
-```markdown
-- 正文行 → 目标正文行：[触发入账](<账务清算> "clado:to:line:幂等更新账户余额")
-- 正文行 → 目标代码行：[回调验签](<支付网关> "clado:to:code:1:2:verifySign")
-- 代码行 → 目标代码行：[dispatch](<支付网关> "clado:code:2;text:dispatch;to:code:1:2:verifySign")
-- 表格行 → 目标 Mermaid：[status](<账务清算> "clado:table:1;to:mermaid:1:SETTLE")
-```
-
-::: tip 选型建议
-新编写的文档推荐优先使用 **卡片 + 语义 Tag（`#tagId`）**，写法更短、跨正文/代码/表格/Mermaid 体验完全统一，且不受行号增删漂移影响。
+::: tip 为什么坚持二元连线模型？
+将目标收敛为 **卡片/小节** 与 **语义 Tag（`#tagId`）** 两种之后，正文、列表、表格、代码行和 Mermaid 节点全部共享同一种语法；增删代码行不会导致行号漂移，文档长期演进时连线依然稳固。
 :::
