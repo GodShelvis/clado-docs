@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.5-beta.6 · 30% Crystal Frosted-Glass UI, Bespoke Persona Dropdown & New Brand Mark
+
+- **30% Crystal Frosted-Glass UI (Zero Gray Slabs)**: Upgraded all four built-in plugins to crisp 30% frosted glass with specular top highlights; inactive controls and document rows stay transparent while active selections lift into luminous crystal pills, with floating rounded liquid-glass sheets on mobile.
+- **Bespoke Frosted-Glass Persona & Executor Dropdown**: Replaced native OS `<select>` popups with a custom Clado glass menu featuring role color dots, descriptions, blue active checkmarks, and a high-legibility frosted backdrop (`84% / 88%`).
+- **Unified Brand Logo & Official Docs Site**: Synced the sculpted vector Clado logo (petite blue dot + bottom rainbow silk aura) into the product and favicons, and launched the official VitePress documentation site.
+
 ## 0.5.5-beta.5 · Monochrome Frosted-Glass UI, Mobile Responsive & Semantic Tag Anchors
 
 - **Monochrome Glass UI & ≥80% Feathered AI Glow**: Removed colored 4-side borders and opaque white modals; added a feathered ≥80% bottom-center breathing aura strictly when AI is actively working.
