@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" fill="none" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#dce1ea"/>
+    </pattern>
+    <filter id="shadow" x="-5%" y="-10%" width="110%" height="125%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <rect width="920" height="430" rx="18" fill="#fafafc" stroke="#e4e7ec"/>
+  <rect width="920" height="430" rx="18" fill="url(#dots)"/>
+
+  <text x="36" y="40" fill="#18181b" font-size="16" font-weight="700">Clado 四层微内核架构（Microkernel Architecture）</text>
+  <text x="36" y="61" fill="#71717a" font-size="12.5">小内核 · 内置受保护命名空间 clado.* · 声明式沙箱插件与动态 MCP 能力路由</text>
+
+  <!-- Layer 3 -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="82" width="848" height="72" rx="12" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <rect x="50" y="96" width="66" height="20" rx="6" fill="rgba(139,92,246,0.12)"/>
+  <text x="83" y="110" text-anchor="middle" fill="#6d28d9" font-size="10.5" font-weight="600">Layer 3</text>
+  <text x="128" y="110" fill="#18181b" font-size="13.5" font-weight="700">外部插件与轻量插件市场（&lt;author&gt;.&lt;name&gt; · iframe 沙箱 + 权限分级审计）</text>
+  <rect x="50" y="124" width="250" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="62" y="139" fill="#52525b" font-size="11.5">UI 能力插件（exposeToAgent 自动挂 MCP）</text>
+  <rect x="314" y="124" width="265" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="326" y="139" fill="#52525b" font-size="11.5">ACP 编码执行器（ZCode / Claude Code / Codex）</text>
+  <rect x="593" y="124" width="275" height="22" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="605" y="139" fill="#52525b" font-size="11.5">clado plugin CLI · 本地/远程 JSON 市场源</text>
+
+  <!-- Layer 2 -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="170" width="848" height="76" rx="12" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <rect x="50" y="184" width="66" height="20" rx="6" fill="rgba(59,130,246,0.12)"/>
+  <text x="83" y="198" text-anchor="middle" fill="#1d4ed8" font-size="10.5" font-weight="600">Layer 2</text>
+  <text x="128" y="198" fill="#18181b" font-size="13.5" font-weight="700">系统内置受保护插件（保留命名空间 clado.* · 不可被外部覆写或卸载）</text>
+  <rect x="50" y="212" width="380" height="24" rx="6" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.22)"/>
+  <text x="62" y="228" fill="#1e40af" font-size="11.5" font-weight="500">三大视图：clado.view.cards（默认） · mindmap · doc</text>
+  <rect x="444" y="212" width="424" height="24" rx="6" fill="rgba(16,185,129,0.06)" stroke="rgba(16,185,129,0.22)"/>
+  <text x="456" y="228" fill="#065f46" font-size="11.5" font-weight="500">四角界面：clado.brand · view-controls · directory · agent（原生流式）</text>
+
+  <!-- Layer 1 -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="262" width="848" height="76" rx="12" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <rect x="50" y="276" width="66" height="20" rx="6" fill="rgba(16,185,129,0.12)"/>
+  <text x="83" y="290" text-anchor="middle" fill="#047857" font-size="10.5" font-weight="600">Layer 1</text>
+  <text x="128" y="290" fill="#18181b" font-size="13.5" font-weight="700">不可变微内核（Immutable Core Kernel）</text>
+  <rect x="50" y="304" width="194" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="60" y="320" fill="#27272a" font-size="11.5">Core Parser · Tag · 诊断</text>
+  <rect x="256" y="304" width="198" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="266" y="320" fill="#27272a" font-size="11.5">多子工作区并发锁 · 原子写</text>
+  <rect x="466" y="304" width="196" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="476" y="320" fill="#27272a" font-size="11.5">Canvas Host · SSE 实时推送</text>
+  <rect x="674" y="304" width="194" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="684" y="320" fill="#27272a" font-size="11.5">MCP Gateway · 能力桥</text>
+
+  <!-- Layer 0 -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="354" width="848" height="52" rx="12" fill="#18181b"/>
+  </g>
+  <rect x="50" y="370" width="66" height="20" rx="6" fill="rgba(255,255,255,0.14)"/>
+  <text x="83" y="384" text-anchor="middle" fill="#e2e8f0" font-size="10.5" font-weight="600">Layer 0</text>
+  <text x="128" y="384" fill="#ffffff" font-size="13" font-weight="600">纯文本单一事实源：.md（兼容 .mdc） · .clado/templates · .clado/plugins · .clado/sessions</text>
+</svg>

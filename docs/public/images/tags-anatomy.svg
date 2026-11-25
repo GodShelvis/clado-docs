@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 390" fill="none" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif">
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#dce1ea"/>
+    </pattern>
+    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="124%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+    <linearGradient id="edgeLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="390" rx="18" fill="#fafafc" stroke="#e4e7ec"/>
+  <rect width="920" height="390" rx="18" fill="url(#dots)"/>
+
+  <!-- Header badge -->
+  <text x="36" y="42" fill="#18181b" font-size="16" font-weight="700">卡片 + 语义 Tag 二元连线模型（Card + Tag Linking Model）</text>
+  <text x="36" y="64" fill="#71717a" font-size="12.5">无论目标在正文、列表、表格还是代码块中，视觉一律归左承接入线，连线只需写 [文案](#tagId)</text>
+
+  <!-- Left Card: Source -->
+  <g filter="url(#cardShadow)">
+    <rect x="36" y="92" width="330" height="260" rx="14" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <rect x="36" y="132" width="3.5" height="20" rx="1.75" fill="#2563eb"/>
+  <text x="54" y="122" fill="#94a3b8" font-size="10.5">SOURCE CARD · 发起连线</text>
+  <text x="54" y="148" fill="#18181b" font-size="16" font-weight="700">订单入口</text>
+
+  <!-- Pill Tag 1 -->
+  <rect x="54" y="170" width="54" height="20" rx="6" fill="rgba(59,130,246,0.12)"/>
+  <text x="81" y="184" text-anchor="middle" fill="#1d4ed8" font-size="10.5" font-weight="600">需求原文</text>
+  <text x="116" y="184" fill="#27272a" font-size="12.5">参数校验后 触发回调验签</text>
+  <line x1="184" y1="188" x2="260" y2="188" stroke="#94a3b8" stroke-dasharray="2 2"/>
+  <rect x="364" y="172" width="4" height="18" rx="2" fill="#2563eb"/>
+
+  <!-- Pill Tag 2 -->
+  <rect x="54" y="210" width="34" height="20" rx="6" fill="rgba(16,185,129,0.12)"/>
+  <text x="71" y="224" text-anchor="middle" fill="#047857" font-size="10.5" font-weight="600">新增</text>
+  <text x="96" y="224" fill="#27272a" font-size="12.5">幂等校验后 进入账务落账</text>
+  <line x1="164" y1="228" x2="240" y2="228" stroke="#94a3b8" stroke-dasharray="2 2"/>
+  <rect x="364" y="212" width="4" height="18" rx="2" fill="#2563eb"/>
+
+  <!-- Pill Tag 3 -->
+  <rect x="54" y="250" width="54" height="20" rx="6" fill="rgba(139,92,246,0.12)"/>
+  <text x="81" y="264" text-anchor="middle" fill="#6d28d9" font-size="10.5" font-weight="600">特别说明</text>
+  <text x="116" y="264" fill="#52525b" font-size="12.5">超时 3s 自动熔断降级</text>
+
+  <!-- Markdown syntax box -->
+  <rect x="54" y="288" width="294" height="48" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="66" y="307" fill="#475569" font-family="ui-monospace, Menlo, monospace" font-size="11">[触发回调验签](#verify-sign)</text>
+  <text x="66" y="325" fill="#475569" font-family="ui-monospace, Menlo, monospace" font-size="11">[进入账务落账](#idempotency)</text>
+
+  <!-- Right Top Card: Code Gutter Tag -->
+  <g filter="url(#cardShadow)">
+    <rect x="478" y="92" width="406" height="134" rx="14" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <text x="498" y="116" fill="#94a3b8" font-size="10.5">TARGET 1 · 代码行左侧边槽 Tag（源码行尾 // {#verify-sign .blue}）</text>
+  <rect x="498" y="130" width="366" height="80" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <!-- Gutter dot & pill -->
+  <circle cx="511" cy="169" r="3.2" fill="#3b82f6"/>
+  <rect x="504" y="182" width="28" height="16" rx="4" fill="rgba(16,185,129,0.14)"/>
+  <text x="518" y="193" text-anchor="middle" fill="#047857" font-size="9.5" font-weight="600">落账</text>
+  <text x="542" y="150" fill="#64748b" font-family="ui-monospace, Menlo, monospace" font-size="11.5">export function onCallback(req) {</text>
+  <text x="542" y="172" fill="#18181b" font-family="ui-monospace, Menlo, monospace" font-size="11.5" font-weight="600">  verifySign(req);</text>
+  <text x="542" y="194" fill="#18181b" font-family="ui-monospace, Menlo, monospace" font-size="11.5">  return ledger.commit(req);</text>
+  <!-- Incoming bar & stem -->
+  <rect x="476" y="159" width="4" height="20" rx="2" fill="#2563eb"/>
+  <line x1="480" y1="169" x2="504" y2="169" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="3 3" stroke-opacity="0.55"/>
+
+  <!-- Right Bottom Card: Dot Tag List -->
+  <g filter="url(#cardShadow)">
+    <rect x="478" y="242" width="406" height="110" rx="14" fill="#ffffff" stroke="#e4e7ec"/>
+  </g>
+  <text x="498" y="266" fill="#94a3b8" font-size="10.5">TARGET 2 · 无字极简 5.5px 纯色圆点（无外圈，自动归左）</text>
+  <circle cx="504" cy="292" r="3" fill="#3b82f6"/>
+  <text x="516" y="296" fill="#52525b" font-size="12.5">前置校验：核对商户资金冻结状态</text>
+  <circle cx="504" cy="316" r="3" fill="#10b981"/>
+  <text x="516" y="320" fill="#18181b" font-size="12.5" font-weight="600">幂等更新账户余额并生成对账流水</text>
+  <text x="720" y="320" fill="#94a3b8" font-family="ui-monospace, Menlo, monospace" font-size="10.5">[]{#idempotency .green}</text>
+  <circle cx="504" cy="338" r="3" fill="#f59e0b"/>
+  <text x="516" y="342" fill="#52525b" font-size="12.5">日终对账差异自动触发告警工单</text>
+  <!-- Incoming bar & stem -->
+  <rect x="476" y="306" width="4" height="20" rx="2" fill="#2563eb"/>
+  <line x1="480" y1="316" x2="498" y2="316" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="3 3" stroke-opacity="0.55"/>
+
+  <!-- Curved wires -->
+  <path d="M 368 181 C 422 181, 422 169, 476 169" stroke="url(#edgeLine)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 368 221 C 424 221, 424 316, 476 316" stroke="url(#edgeLine)" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
